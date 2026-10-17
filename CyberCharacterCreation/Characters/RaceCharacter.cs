@@ -1,11 +1,12 @@
-﻿
-//
+﻿using CyberCharacterCreation.Inventory;
+
 namespace CyberCharacterCreation.Characters;
 
 public abstract class RaceCharacter : Character
 {
     public override string Name { get; set; }
     public override string CharacterClass => "Unassigned Operative";
+    public override IInventoryRepository Inventory { get; }
 
     public override int Health { get; }
     public override int Defense { get; }
@@ -23,6 +24,6 @@ public abstract class RaceCharacter : Character
         Strength = strength;
         Intellect = intellect;
         Agility = agility;
+        Inventory = new InventoryRepository();
     }
 }
-

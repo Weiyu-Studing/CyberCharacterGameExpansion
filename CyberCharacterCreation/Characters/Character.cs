@@ -1,4 +1,5 @@
 ﻿namespace CyberCharacterCreation.Characters;
+using CyberCharacterCreation.Inventory;
 
 public abstract class Character
 {
@@ -13,7 +14,7 @@ public abstract class Character
     public abstract int Intellect { get; }
     public abstract int Agility { get; }
 
-    // 
+    public abstract IInventoryRepository Inventory { get; }
 
     public abstract void Act();
     public abstract void Speak();

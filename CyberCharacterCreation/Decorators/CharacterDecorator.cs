@@ -1,4 +1,5 @@
 ﻿using CyberCharacterCreation.Characters;
+using CyberCharacterCreation.Inventory;
 
 namespace CyberCharacterCreation.Decorators;
 
@@ -11,7 +12,8 @@ public abstract class CharacterDecorator : Character
         WrappedCharacter = wrappedCharacter;
     }
 
-    //
+    public override IInventoryRepository Inventory => WrappedCharacter.Inventory;
+
     public override string Name
     {
         get => WrappedCharacter.Name;
