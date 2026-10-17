@@ -12,8 +12,9 @@ public class GameRunner
 
     public void Run()
     {
-        Console.WriteLine("===== Well Come to Cyber Character Creation! =====");
+        Console.WriteLine("===== Well Come to Neo‑City---Cyber Character Creation! =====");
         Console.WriteLine("Here, you can build the most terrifying army—----and make your enemies tremble!!!");
+        Console.WriteLine($"Neo‑City simulation started {_world.NeoCityStartTime:HH:mm} | Threat Level {_world.ThreatLevel}");
 
 
         Console.Write("\nEnter operative name: ");
