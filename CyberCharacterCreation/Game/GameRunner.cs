@@ -21,9 +21,15 @@ public class GameRunner
         string name = Console.ReadLine()?.Trim() ?? "Rookie";
 
 
-        Console.WriteLine("\nChoose race: 1 = Human 2 = Synth");
+        Console.WriteLine("\nChoose race: 1 = Human 2 = Synth 3 = Splorg");
         string raceSel = Console.ReadLine()?.Trim();
-        string race = raceSel == "2" ? "synth" : "human";
+        string race = raceSel switch
+        {
+            "1" => "human",
+            "2" => "synth",
+            "3" => "splorg",
+            _ => "human"
+        };
 
 
         Character player = CharacterFactory.CreateCharacter(race, name);
