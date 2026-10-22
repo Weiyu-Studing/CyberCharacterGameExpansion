@@ -17,18 +17,20 @@ public class SplorgAdapter : Character
 
     public override string Name
     {
-        get => throw new NotImplementedException();
-        set => throw new NotImplementedException();
+        get => _legacySplorg.Name;
+        set => _legacySplorg.Name = value;
     }
+    public override string Race => "Splorg";
+    public override string CharacterClass => "Unassigned Operative";
 
-    public override string Race => throw new NotImplementedException();
-    public override string CharacterClass => throw new NotImplementedException();
-    public override int Health => throw new NotImplementedException();
-    public override int Defense => throw new NotImplementedException();
-    public override int Speed => throw new NotImplementedException();
-    public override int Strength => throw new NotImplementedException();
-    public override int Intellect => throw new NotImplementedException();
-    public override int Agility => throw new NotImplementedException();
+    public override int Health => (int)(_legacySplorg.BubbleMatterRemaining * 100);
+    public override int Defense => _legacySplorg.BubbleDurability;
+    public override int Speed => _legacySplorg.Speed;
+    public override int Strength => _legacySplorg.Luck;
+    public override int Intellect => _legacySplorg.Smarts;
+    public override int Agility => _legacySplorg.Finesse;
+
+
 
     public override void Act() => throw new NotImplementedException();
     public override void Speak() => throw new NotImplementedException();
