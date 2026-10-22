@@ -31,9 +31,22 @@ public class SplorgAdapter : Character
     public override int Agility => _legacySplorg.Finesse;
 
 
+    public override void Act()
+    {
+        _legacySplorg.SplorgAction();
+    }
 
-    public override void Act() => throw new NotImplementedException();
-    public override void Speak() => throw new NotImplementedException();
-    public override void PrintDetails() => throw new NotImplementedException();
+    public override void Speak()
+    {
+        string sound = _legacySplorg.Communicate();
+        Console.WriteLine($"{Name}: {sound}");
+    }
+
+    public override void PrintDetails()
+    {
+        base.PrintDetails();
+        Console.WriteLine($"Splorg Color: {_legacySplorg.Color}");
+        _legacySplorg.printDescription();
+    }
 }
 
