@@ -1,8 +1,10 @@
-﻿namespace CyberCharacterCreation.Characters;
+﻿using System.Drawing;
+
+namespace CyberCharacterCreation.Characters;
 
 public class Synth : RaceCharacter
 {
-    public Synth(string name) : base(name, health: 120, defense: 13, speed: 9, strength: 13, intellect: 10, agility: 8)
+    public Synth(string name, string color) : base(name, color, health: 120, defense: 13, speed: 9, strength: 13, intellect: 10, agility: 8)
     {
     }
 

@@ -1,8 +1,10 @@
-﻿namespace CyberCharacterCreation.Characters;
+﻿using System.Drawing;
+
+namespace CyberCharacterCreation.Characters;
 
 public class Human : RaceCharacter
 {
-    public Human(string name) : base(name, health: 100, defense: 9, speed: 11, strength: 10, intellect: 12, agility: 11)
+    public Human(string name, string color) : base(name, color, health: 100, defense: 9, speed: 11, strength: 10, intellect: 12, agility: 11)
     {
     }
 

@@ -19,6 +19,13 @@ public abstract class CharacterDecorator : Character
         get => WrappedCharacter.Name;
         set => WrappedCharacter.Name = value;
     }
+
+    public override string Color
+    {
+        get => WrappedCharacter.Color;
+        set => WrappedCharacter.Color = value;
+    }
+
     public override string Race => WrappedCharacter.Race;
     public override string CharacterClass => WrappedCharacter.CharacterClass;
 

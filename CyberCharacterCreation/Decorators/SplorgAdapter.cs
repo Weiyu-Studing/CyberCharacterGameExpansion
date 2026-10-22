@@ -20,6 +20,13 @@ public class SplorgAdapter : Character
         get => _legacySplorg.Name;
         set => _legacySplorg.Name = value;
     }
+
+    public override string Color
+    {
+        get => _legacySplorg.Color;
+        set { }
+    }
+
     public override string Race => "Splorg";
     public override string CharacterClass => "Unassigned Operative";
 
