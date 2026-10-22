@@ -31,7 +31,7 @@ public class GameRunner
             _ => "human"
         };
 
-        Console.WriteLine("\nChoose color: 1=Red 2=Green 3=Blue");
+        Console.WriteLine("\nChoose color: 1 = Red 2 = Green 3 = Blue");
         string color = Console.ReadLine()?.Trim() switch
         {
             "1" => "Red",
