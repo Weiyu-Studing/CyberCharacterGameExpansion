@@ -1,4 +1,7 @@
 ﻿using CyberCharacterCreation.Characters;
+using Artifact_Legacy_Code;
+using CyberCharacterCreation.Decorators;
+
 
 namespace CyberCharacterCreation.Factories;
 
@@ -10,6 +13,7 @@ public static class CharacterFactory
         {
             "human" => new Human(name),
             "synth" => new Synth(name),
+            "splorg" => new SplorgAdapter(new Splorg(name, "Blue")),
             _ => throw new ArgumentException("Unknown race type")
         };
     }
